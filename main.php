@@ -16,7 +16,7 @@ creates keys in folder
 @parm optional string - provide folder to place key files default folder containing this file
 */
 if (!file_exists($keysFolder . '/private.key')) {
-	$ssl->create(2048, $keysFolder);
+	$ssl->create($keysFolder, 2048);
 }
 
 /* load a giant piece of text into a string */

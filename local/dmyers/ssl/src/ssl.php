@@ -17,17 +17,15 @@ class ssl
 {
 	/**
 	 * Method create
-	 * 
-	 * Create Private and Public Keys
 	 *
-	 * @param $bits $bits [explicite description]
-	 * @param $folder $folder [explicite description]
+	 * @param string $folder [explicite description]
+	 * @param int $bits [explicite description]
 	 *
 	 * @return void
 	 */
-	public function create(int $bits = 2048, string $folder): void
+	public function create(string $folder, int $bits = 2048): void
 	{
-		$folder = ($folder) ? rtrim($folder, '/') : __DIR__;
+		$folder = rtrim($folder, '/');
 
 		$publicFile = $folder . '/public.key';
 		$privateFile = $folder . '/private.key';
@@ -61,10 +59,10 @@ class ssl
 	/**
 	 * Method encrypt
 	 *
-	 * @param $data $data [explicite description]
-	 * @param $keyFile $keyFile [explicite description]
+	 * @param string $data [explicite description]
+	 * @param string $keyFile [explicite description]
 	 *
-	 * @return void
+	 * @return string
 	 */
 	public function encrypt(string $data, string $keyFile): string
 	{
@@ -102,10 +100,10 @@ class ssl
 	/**
 	 * Method decrypt
 	 *
-	 * @param $data $data [explicite description]
-	 * @param $keyFile $keyFile [explicite description]
+	 * @param string $data [explicite description]
+	 * @param string $keyFile [explicite description]
 	 *
-	 * @return void
+	 * @return string
 	 */
 	public function decrypt(string $data, string $keyFile): string
 	{
