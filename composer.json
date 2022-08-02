@@ -1,0 +1,17 @@
+{
+    "name": "dmyers/ssl",
+    "description": "Simple SSL Library",
+    "type": "library",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "dmyers\\ssl\\": "local/dmyers/ssl/src/"
+        },
+        "files": []
+    },
+    "authors": [{
+        "name": "Don Myers",
+        "email": "donmyers@me.com"
+    }],
+    "require": {}
+}
